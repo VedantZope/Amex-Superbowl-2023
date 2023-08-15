@@ -44,7 +44,6 @@ def incr_act_top10(input_df,pred_col,cm_key='customer',treated_col='ind_recommen
     recommended_avg_30d_act = float(agg_df.loc[agg_df[treated_col]==1,'avg_30d_act'])
     not_recommended_avg_30d_act = float(agg_df.loc[agg_df[treated_col]==0,'avg_30d_act'])
     
-	
     return (recommended_avg_30d_act-not_recommended_avg_30d_act)
 	
 # sys.argv takes in the arguments that you pass from terminal. First argument is the location of Evaluation code file, Second argument is the location of submission file and Third argument is the location of Dependent Variable file
